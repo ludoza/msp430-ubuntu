@@ -1,0 +1,4 @@
+#!/bin/sh
+# http://www.mycontraption.com/programming-the-msp430-launchpad-on-ubuntu/
+
+sudo apt-get install binutils-msp430 gcc-msp430 msp430-libc mspdebug

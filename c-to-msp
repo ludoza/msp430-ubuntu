@@ -1,0 +1,7 @@
+#!/bin/sh
+# http://notes.ericjiang.com/posts/562
+
+MCU="msp430g2231"
+msp430-gcc -Os -mmcu=$MCU -o $1.elf $1
+msp430-objcopy -O ihex $1.elf $1.hex # generate hex file
+mspdebug rf2500 "prog $1.hex" # download to the launchpad
